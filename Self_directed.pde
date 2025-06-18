@@ -47,7 +47,7 @@ PImage bombardino; //drop bombs
 PImage tralalero; //runs faster 
 PImage tung; //beat someone up if tries to steal crown
 PImage cappuccino; //steal the crown from far away
-PImage bat;
+PImage bat, swordl, swordr, nikel, niker, missile;
 
 int mode;
 final int INTRO = 0;
@@ -75,7 +75,7 @@ boolean crocodilosound2, tralalasound2, sahursound2, assassinosound2;
 
 void setup() {
   size(1200,800,P2D);
-  mode = 0;
+  mode = 1;
   counter = 0;
   score2 = 0;
   score1 = 0;
@@ -156,6 +156,11 @@ void setup() {
   tung = loadImage("tung.jpg");
   cappuccino = loadImage("cappuccino.jpg");
   bat = loadImage("bat.png");
+  swordl = loadImage("sword left.png");
+  swordr = loadImage("sword right.png");
+  nikel = loadImage("nike left.png");
+  niker = loadImage("nike right.png");
+  missile = loadImage("missile.png");
   
   
   polizia = new SoundFile(this,"polizia.mp3");

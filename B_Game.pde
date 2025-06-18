@@ -18,6 +18,7 @@ void game() {
   shark();
   policecar();
   trees();
+  abilities();
   nightfall();
   timer();
   scores();
@@ -25,7 +26,7 @@ void game() {
   crownmechanics();
   cooldowns();
   sounds();
-  abilities();
+
 }
 
 void ocean() {
@@ -584,6 +585,14 @@ void sounds() {
         assassino.play();
         assassinosound = false;
     }
+    crocodilo2.pause();
+    crocodilosound2 = true;
+    tralala2.pause();
+    tralalasound2 = true;
+    sahur2.pause();
+    sahursound2 = true;
+    assassino2.pause();
+    assassinosound2 = true;  
   } else {
     crocodilo.pause();
     crocodilosound = true;
@@ -608,10 +617,18 @@ void sounds() {
         sahur2.play();
         sahursound2 = false;
     }
-    if (char1 == 4 && assassinosound2 == true) {
+    if (char2 == 4 && assassinosound2 == true) {
         assassino2.play();
         assassinosound2 = false;
     }
+    crocodilo.pause();
+    crocodilosound = true;
+    tralala.pause();
+    tralalasound = true;
+    sahur.pause();
+    sahursound = true;
+    assassino.pause();
+    assassinosound = true;
   } else {
     crocodilo2.pause();
     crocodilosound2 = true;
@@ -622,8 +639,46 @@ void sounds() {
     assassino2.pause();
     assassinosound2 = true;
   }
+  println(crown);
 }
 
 void abilities() {
+  if (char1 == 1) {
+    strokeWeight(2);
+    stroke(0);
+    line(x1,y1+15,x1,y1+25);
+    image(missile,x1-12.5,y1+8,25,35);
+  }  
+  if (char1 == 2) {
+    image(nikel,x1-25,y1+10,20,15);
+    image(niker,x1+5,y1+10,20,15);
+  }
+  if (char1 == 3) {
+    image(bat,x1,y1-10,30,30);
+  }
+  if (char1 == 4) {
+    image(swordl,x1-35,y1-10,30,30);
+    image(swordr,x1+5,y1-10,30,30);
+  }
   
+  
+  if (char2 == 1) {
+    strokeWeight(2);
+    stroke(0);
+    line(x2,y2+15,x2,y2+25);
+    image(missile,x2-12.5,y2+8,25,35);
+  }  
+  if (char2 == 2) {
+    image(nikel,x2-25,y2+10,20,15);
+    image(niker,x2+5,y2+10,20,15);
+  }
+  if (char2 == 3) {
+    image(bat,x2,y2-10,30,30);
+  }
+  if (char2 == 4) {
+    image(swordl,x2-35,y2-10,30,30);
+    image(swordr,x2+5,y2-10,30,30); 
+  }
+  
+  strokeWeight(3);
 }
